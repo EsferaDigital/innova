@@ -1,0 +1,64 @@
+ //Off-canvas para el menu
+
+ $off-canvas: 8rem; //modificar segun necesidad o mejora
+
+//Layout
+
+ $max-width: 1280px;
+ // .l-container{ //Layout container, para definir los limites de los contenidos
+ //
+ // }
+
+ //Gutter para las separaciones
+
+ $gutter: 1rem;
+ $top-header: rem(48px);
+
+  // Mixins
+
+  // Mixin básico, si lleva valores, los predeterminados van al final
+
+  @mixin button-ejemplo($line-height,$font-size,$display:inline-block){
+    //codigo ejemplo
+    display: $display;
+    line-height: $line-height;
+    font-size: $font-size;
+    padding: 0 1rem;
+  }
+
+  // ejemplo de uso
+  .button-ej{
+    @include button-ejemplo(3,1rem);
+    &-small{
+      @include button-ejemplo(2.5,0.8rem);
+    }
+  }
+
+  // Mixin con selectores adentro
+
+  @mixin widget($padding,$header-font,$header-color){
+    display: block;
+    padding: $padding;
+    header{
+      font-family: $header-font;
+      color: $header-color;
+    }
+  }
+
+  // ejemplo de uso
+
+  .widget{
+    @include widget(1em,Arial,blue);
+  }
+
+  // Mixin con múltiples argumentos
+
+  @mixin multiple($box-shadow...){
+    box-shadow: $box-shadow;
+  }
+
+  // ejemplo de uso
+
+  .box{
+    @include multiple(1px solid red, 2px solid blue, 5px solid white);
+  }

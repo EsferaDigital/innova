@@ -1,0 +1,31 @@
+ //Funciones
+
+ //Para obtener color
+
+ @function color($color) {
+   @return map-get($colors,$color);
+ }
+
+ // Con esta función, para capturar el color bastaria poner, por ejemplo:
+  //
+  // div{
+  //   background: color(gris-claro);
+  // }
+
+  // Funcion para obtener imagenes
+
+  @function img($img) {
+    @return url('./img/' + $img);
+  }
+
+  // Convertir px a em
+
+  @function em($el,$parent:16px) {
+    @return ($el / $parent) * 1em;
+  }
+
+  // Convertir px a rem
+
+  @function rem($el) {
+    @return ($el / 16px) * 1rem;
+  }

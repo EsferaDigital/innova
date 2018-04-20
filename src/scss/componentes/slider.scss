@@ -1,0 +1,92 @@
+.slider{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	border: 3px solid blue;
+	&-item{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 3px solid orangered;
+		visibility: hidden;
+		opacity: 0;
+		&-img{
+			position: relative;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 3px solid red;
+		}
+		&-text{
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			top: 85%;
+			color: white;
+			font-weight: bold;
+			border: 3px solid yellow;
+		}
+	}
+}
+
+.slider a{
+	position: absolute;
+	color: white;
+	font-size: 36px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: black;
+	&:hover{
+		color: gray;
+	}
+}
+
+.siguiente{
+	left: 97%;
+}
+
+.boton{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 5%;
+	left: 95%;
+	border: 1px solid red;
+}
+
+.puntos{
+	position: absolute;
+	width: 100%;
+	top: 93%;
+	text-align: center;
+	border: 1px solid red;
+}
+
+.punto{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: white;
+	border-radius: 50%;
+	margin-right: 5px;
+	&:hover{
+		cursor: pointer;
+		background-color: gray;
+	}
+}
+
+.buttons{
+	display: none;
+	position: absolute;
+	border: 3px solid palevioletred;
+}
+
+.actual{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s, opacity 1s;
+}
+
+.activo{
+	background-color: gray;
+}

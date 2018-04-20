@@ -1,0 +1,14 @@
+// Importar Tipografía
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+ $main-font: 'Roboto', sans-serif; //Tipo de fuente
+ $light: 300; //Ancho de fuente
+ $normal: 400; //Ancho de fuente
+
+ //Tamaños de fuentes
+
+ $font-size: em(14px);
+ $h3-size: $font-size * 1.15;
+ $h2-size: $font-size * 1.35;
+ $h1-size: $font-size * 1.7;
