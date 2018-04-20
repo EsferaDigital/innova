@@ -47,7 +47,7 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./public/css'))
 		.pipe(cleanCss({ keepSpecialComments: 1 }))
 		// Escribir los sourcemaps
-		.pipe(sourcemaps.write('./public/css'))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./public/css'))
 		.pipe(bs.stream())
 		.pipe(notify({ message: 'Sass task finalizada' }))
@@ -66,7 +66,7 @@ gulp.task('javascript', ['lint'], function () {
 	return gulp.src('./src/es6/activos/*.js')
 		.pipe(babel())
 		.pipe(plumber({ errorHandler: onError }))
-		.pipe(concat('all.min.js'))
+		//.pipe(concat('all.min.js')) para concatenarlos todos
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/es5'))
 		.pipe(notify({ message: 'JavaScript task finalizada' }))

@@ -1,0 +1,1 @@
+"use strict";!function(e){e(document).ready(function(){e(".flexslider").flexslider({animation:"slide",slideShow:!0,controlNav:!0})})}(jQuery);
