@@ -1,7 +1,11 @@
 // Paleta de colores
 
 $colors:(
-	primary: hsl(211, 23%, 26%),
-   secondary: hsl(200, 72%, 50%),
+	primary: hsl(192, 26%, 27%),
+	degradado-start: hsl(176, 100%, 32%),
+	degradado-end:hsl(147, 57%, 43%),
+	text-soft: hsl(147, 57%, 43%),
+	text-dark: hsl(0, 0%, 11%),
+	cascada-logo: hsl(242, 19%, 63%),
 	cta: hsla(18, 90%, 53%, 0.9),
 );
