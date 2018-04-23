@@ -1,0 +1,35 @@
+.c-programa{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	border: 1px solid red;
+	&-item{
+		display: block;
+		width: 100%;
+		height: auto;
+		padding: $gutter;
+		@include mq($medium){
+			width: 50%;
+		}
+	}
+	&-title{
+		letter-spacing: 2px;
+		margin: $gutter;
+		margin-left: 0;
+	}
+	&-text{
+		color: color(text-dark);
+		letter-spacing: 2px;
+	}
+	&-button{
+		margin: $gutter;
+		margin-right: 0;
+		float: right;
+	}
+	&-img{
+		width: 100%;
+		height: auto;
+		padding: $gutter;	
+	}
+}

@@ -15,7 +15,7 @@
   // Funcion para obtener imagenes
 
   @function img($img) {
-    @return url('./img/' + $img);
+    @return url('/img/' + $img);
   }
 
   // Convertir px a em
