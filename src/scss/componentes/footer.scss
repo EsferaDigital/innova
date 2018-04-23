@@ -1,3 +1,19 @@
-.footer{
-	background-color: blue;
+.c-footer{
+	@include c-wrap;
+	color: white;
+	background-color: color(primary);
+	&-item{
+		@include i-wrap;
+		width: 100%;
+		padding: $gutter;
+		@include mq($medium){
+			width: 33%;
+		}
+	}
+}
+
+.copyright{
+	display: block;
+	width: 100%;
+	text-align: center;
 }
