@@ -1,0 +1,21 @@
+@mixin c-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+}
+
+@mixin i-wrap{
+	display: block;
+	flex: auto;
+	height: auto;
+	//equivale a 1 1 auto
+	// grow(crecerá) shrink(se encogera) basis(base)
+}
+
+//ejemplo de uso
+
+// .usoejem{
+// 	@include c-wrap();
+// 	font-family: sans-serif;
+// }

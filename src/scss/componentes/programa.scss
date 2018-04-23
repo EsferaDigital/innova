@@ -1,13 +1,10 @@
 .c-programa{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
+	@include c-wrap;
 	height: auto;
 	border: 1px solid red;
 	&-item{
-		display: block;
+		@include i-wrap;
 		width: 100%;
-		height: auto;
 		padding: $gutter;
 		@include mq($medium){
 			width: 50%;

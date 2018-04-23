@@ -1,12 +1,12 @@
-.c-desafio{
+.c-colaboradores{
 	@include c-wrap;
 	padding: $gutter;
-	border: 1px solid green;
+	border: 1px solid violet;
 	&-item{
 		@include i-wrap;
 		width: 100%;
 		padding: $gutter;
-		border: 1px solid black;
+		border: 1px solid teal;
 		@include mq($medium){
 			width: 50%;
 		}
@@ -14,10 +14,4 @@
 			width: 25%;
 		}
 	}
-}
-
-.title{
-	text-align: center;
-	width: 100%;
-	margin-bottom: .5rem;
 }
