@@ -2,10 +2,13 @@
 	display: flex;
 	position: fixed;
 	width: 100%;
+	top: 0;
 	height: auto;
 	justify-content: space-between;
 	z-index: 999;
+	background-color: color(primary);
 	padding: $gutter;
+	transition: all .4s ease;
 	border: 1px solid red;
 	&-logo{
 		width: 5%;
@@ -18,7 +21,7 @@
 		padding: 0 $gutter;
 		z-index: 1000;
 		color: black;
-		background-color: turquoise;
+		background-color: color(primary);
 		cursor: pointer;
 	}
 }
@@ -48,6 +51,12 @@
 		line-height: 3;
 		color: white;
 	}
+}
+
+//Estilo para eventos
+
+.header-scroll{
+	top: -5rem;
 }
 
 .mostrar{
