@@ -1,5 +1,55 @@
-.header{
+.c-header{
+	display: flex;
+	position: fixed;
 	width: 100%;
 	height: auto;
+	justify-content: space-between;
+	z-index: 999;
+	padding: $gutter;
+	border: 1px solid red;
+	&-logo{
+		width: 5%;
+		height: auto;
+		padding: 0 $gutter;
+	}
+	&-menu{
+		position: relative;
+		font-size: 2rem;
+		padding: 0 $gutter;
+		z-index: 1000;
+		color: black;
+		background-color: turquoise;
+		cursor: pointer;
+	}
+}
+
+.c-nav{
+	position: fixed;
+	display: flex;
 	background-color: color(primary);
+	top: 0;
+	right: -$off-canvas;
+	width: $off-canvas;
+	height: 100vh;
+	padding: 1rem;
+	padding-top: rem(100px);
+	z-index: 200;
+	transition: all .4s;
+	& ul{
+		display: block;
+	}
+	& li{
+		border-bottom: 1px solid black;
+	}
+	& a{
+		display: block;
+		position: relative;
+		text-transform: uppercase;
+		line-height: 3;
+		color: white;
+	}
+}
+
+.mostrar{
+	right: 0;
 }

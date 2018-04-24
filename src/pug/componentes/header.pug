@@ -1,2 +1,14 @@
 header.c-header
-	include ./slider
+	h1.c-header-logo
+		a(href="#")
+			img(src="img/logo.svg", alt="Logo")
+	#toggle-menu.c-header-menu =
+	nav#main-nav.c-nav
+		ul
+			li
+				a(href="#programa").link Programa
+			li
+				a(href="#desafio").link Desafio
+			li
+				a(href="#colaboradores").link Colaboradores
+include ./slider
