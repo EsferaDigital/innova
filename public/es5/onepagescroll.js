@@ -1,0 +1,1 @@
+"use strict";!function(i){i.fn.extend({onePageScrolling:function(t){var o=i.extend({velocidad:1e3},t);return i(this).each(function(){i(this).on("click",function(t){t.preventDefault();var e=i(this).attr("href"),n=i(e).offset().top;i("html, body").animate({scrollTop:n},o.velocidad)})})}})}(jQuery);
