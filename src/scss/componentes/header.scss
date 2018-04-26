@@ -2,7 +2,6 @@
 	display: flex;
 	position: fixed;
 	width: 100%;
-	top: 0;
 	height: auto;
 	justify-content: space-between;
 	z-index: 999;
@@ -55,10 +54,14 @@
 
 //Estilo para eventos
 
-.header-scroll{
+.hide-header{
 	top: -5rem;
 }
 
-.mostrar{
+.show-header{
+	top: 0;
+}
+
+.show-menu{
 	right: 0;
 }

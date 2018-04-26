@@ -32,13 +32,13 @@ let lastScrollTop = 0;
 // Programamos las funciones
 
 //Muestra u ocultamos el menu
-function mostrarOcultar() {
-	mainNav.classList.toggle('mostrar')
+function showHideMenu() {
+	mainNav.classList.toggle('show-menu')
 }
 
 //Oculta el menu
-function ocultarMenu() {
-	mainNav.classList.remove('mostrar')
+function hideMenu() {
+	mainNav.classList.remove('show-menu')
 }
 
 //Muestra u oculta el header
@@ -46,23 +46,28 @@ function showHideHeader() {
 	let st = window.pageYOffset || document.documentElement.scrollTop;
 
 	if (st > lastScrollTop) {
-		header.classList.add('header-scroll')
+		header.classList.replace('show-header', 'hide-header')
+		
 	} else {
-		header.classList.remove('header-scroll')
+		header.classList.replace('hide-header', 'show-header')
 	}
+	
 	lastScrollTop = st;
 }
 
+//Oculta el header al ir a un link
+
+
 //Ejecutamos las funciones
 
-toggleMenu.addEventListener('click', mostrarOcultar)
+toggleMenu.addEventListener('click', showHideMenu)
 
-mainNav.addEventListener('mouseleave', ocultarMenu)
+mainNav.addEventListener('mouseleave', hideMenu)
 
 window.addEventListener('scroll', showHideHeader, false);
 
 for (let n = 0; n < itemLink.length; n++) {
-	itemLink[n].addEventListener('click', mostrarOcultar)
+	itemLink[n].addEventListener('click', showHideMenu)
 }
 
 //Fin Navegacion
@@ -93,3 +98,93 @@ function efectos(){
 
 $(document).ready(efectos)
 $(window).on('scroll', detectedScroll)
+
+//Fin Efectos y animaciones
+
+//Ventana Modal
+
+// Funciones necesarias
+
+// Añadir un objeto de atributos a un elemento
+const addAttributes = (element, attrObj) => {
+	for (let attr in attrObj) {
+		if (attrObj.hasOwnProperty(attr)) element.setAttribute(attr, attrObj[attr])
+	}
+};
+
+// Crear elementos con atributos e hijo
+const createCustomElement = (element, attributes, children) => {
+	let customElement = document.createElement(element);
+	if (children !== undefined) children.forEach(el => {
+		if (el.nodeType) {
+			if (el.nodeType === 1 || el.nodeType === 11) customElement.appendChild(el);
+		} else {
+			customElement.innerHTML += el;
+		}
+	});
+	addAttributes(customElement, attributes);
+	return customElement;
+};
+
+// Imprimir modal
+
+//Obtenemos cada modal
+
+const modal1 = document.getElementById('modal1'),
+		modal2 = document.getElementById('modal2'),
+		modal3 = document.getElementById('modal3'),
+		modal4 = document.getElementById('modal4')
+
+//content es el parametro que recibe la funcion. En el meteremos el contenido del modal en si que va dentro del div modalContentEl
+const printModal = content => {
+	//Crea contenedor interno
+	const modalContentEl = createCustomElement('div', {
+		id: 'content-modal',
+		class: 'c-modal-item'
+	}, [content])
+	// crea contenedor principal
+	const modalContainerEl = createCustomElement('div', {
+		id: 'container-modal',
+		class: 'c-modal'
+	}, [modalContentEl] )
+
+	// Imprimri el modal
+	document.body.appendChild(modalContainerEl)
+
+	//Remover el modal
+	 const removeModal = () => document.body.removeChild(modalContainerEl)
+
+	 // Evento que ejecuta la funcion que remueve el modal
+
+	 modalContainerEl.addEventListener('click', e => {
+		 if(e.target === modalContainerEl) removeModal()
+	 })
+}
+
+//Contenido de cada modal
+const contModal1 = `<h2>Modal 1 Funciona</h2>`,
+		contModal2 = `<h2>Modal 2 Funciona</h2>`,
+		contModal3 = `<h2>Modal 3 Funciona</h2>`,
+		contModal4 = `<h2>Modal 4 Funciona</h2>`
+
+//Ejecución de cada modal (esto se puede mejorar con un array de elementos)
+
+// for (let n = 0; n < itemLink.length; n++) {
+// 	itemLink[n].addEventListener('click', showHideMenu)
+// 	// 	itemLink[n].addEventListener('click', hideHeader)
+// }
+
+modal1.addEventListener('click', () => {
+	printModal(`${contModal1}`)
+})
+
+modal2.addEventListener('click', () => {
+	printModal(`${contModal2}`)
+})
+
+modal3.addEventListener('click', () => {
+	printModal(`${contModal3}`)
+})
+modal4.addEventListener('click', () => {
+	printModal(`${contModal4}`)
+})
