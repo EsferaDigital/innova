@@ -1,13 +1,17 @@
 .c-programa{
 	@include c-wrap;
 	height: auto;
-	border: 1px solid red;
+	background-color: rgba(245, 245, 245, 0.952);
 	&-item{
 		@include i-wrap;
 		width: 100%;
 		padding: $gutter;
+		margin: .5rem;
+		background-color: white;
+		border: 1px solid black;
+		box-shadow: 7px 7px 7px;
 		@include mq($medium){
-			width: 50%;
+			width: 45%;
 		}
 	}
 	&-title{

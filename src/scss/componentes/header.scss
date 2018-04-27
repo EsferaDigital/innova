@@ -5,10 +5,11 @@
 	height: auto;
 	justify-content: space-between;
 	z-index: 999;
-	background-color: color(primary);
+	// background-color: color(primary);
 	padding: $gutter;
 	transition: all .4s ease;
 	border: 1px solid red;
+	opacity: .8;
 	&-logo{
 		width: 5%;
 		height: auto;

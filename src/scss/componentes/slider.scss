@@ -1,22 +1,47 @@
-.flexslider {
-	margin: 0;
+.c-slider{
+	position: relative;
 	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	box-shadow: 0 5px 10px;
 }
 
-.flex-caption {
-	width: 100%;
-	padding: 2%;
-	left: 0;
-	bottom: 0;
-	/* background: rgba(0,0,0,.5); */
-	color: #fff;
-	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-	/* font-size: 14px; */
-	line-height: 18px;
-	/* Agregar margin:0 a los estilos propuestos por el plugin */
-	margin: 0;
-	font-size: 20px;
-	background-color: rgba(0,0,0,.5);	
+.slider{
+	display: flex;
+	width: 300%;
+	&-section{
+		width: 100%;
+	}
+	&-img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 }
 
-#oculto { display: none; }
+.btn-prev, .btn-next{
+	width: rem(40px);
+	height: rem(40px);
+	background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: rem(40px);
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	font-family: monospace;
+	border-radius: 50%;
+	cursor: pointer;
+	&:hover{
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+
+.btn-prev{
+	left: 10px;
+}
+
+.btn-next{
+	right: 10px;
+}
