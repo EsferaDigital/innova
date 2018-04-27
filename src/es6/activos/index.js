@@ -36,7 +36,7 @@ prev.on('click', function(){
 })
 
 function autoplay(){
-	interval = setInterval(function(){
+	setInterval(function(){
 		moverD()
 	}, 5000)
 }
@@ -46,6 +46,22 @@ autoplay()
 //Fin Slider
 
 // Navegacion
+
+//One Page scroll
+
+function onePageScroll(e){
+	e.preventDefault()	
+	var idLink = $(this).attr('href'),
+		 coordSection = $(idLink).offset().top
+
+	$('html, body').animate({
+		scrollTop : coordSection
+	}, 1000)
+}
+
+//ejecutamos la funcion onePageScroll en el eventos click de cada enlace
+
+$('.link').on('click', onePageScroll)
 
 // Capturamos los elementos
 

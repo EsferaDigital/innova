@@ -6,11 +6,25 @@
    @return map-get($colors,$color);
  }
 
- // Con esta función, para capturar el color bastaria poner, por ejemplo:
+  // Con esta función, para capturar el color bastaria poner, por ejemplo:
   //
   // div{
   //   background: color(gris-claro);
   // }
+
+ //Para obtener variables z-index
+
+ @function z-index($capa){
+   @return map-get($capas, $capa);
+ }
+
+  // Con esta función, para poner z-index bastaria poner, por ejemplo:
+  //
+  // div{
+  //   z-index: z-index(capa1);
+  // }
+
+
 
   // Funcion para obtener imagenes
 

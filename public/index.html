@@ -9,112 +9,108 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <body>
-      <header class="c-header show-header" id="mainHeader">
-        <h1 class="c-header-logo"><a href="#"><img src="img/logo.svg" alt="Logo"/></a></h1>
-        <div class="c-header-menu" id="toggle-menu">=</div>
-        <nav class="c-nav" id="main-nav">
-          <ul>
-            <li><a class="link" href="#">Inicio</a></li>
-            <li><a class="link" href="#programa">Programa</a></li>
-            <li><a class="link" href="#desafio">Desafio</a></li>
-            <li><a class="link" href="#colaboradores">Colaboradores</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="c-slider" id="c-slider">
-        <div class="slider" id="slider">
-          <section class="slider-section"><img class="slider-img" src="img/1.jpg" alt=""/></section>
-          <section class="slider-section"><img class="slider-img" src="img/2.jpg" alt=""/></section>
-          <section class="slider-section"><img class="slider-img" src="img/3.jpg" alt=""/></section>
+      <div class="l-container" id="inicio">
+        <header class="c-header show-header" id="mainHeader">
+          <h1 class="c-header-logo"><a href="#"><img src="img/logo.svg" alt="Logo"/></a></h1>
+          <div class="c-header-menu" id="toggle-menu">=</div>
+          <nav class="c-nav" id="main-nav">
+            <ul>
+              <li><a class="link" href="#inicio">Inicio</a></li>
+              <li><a class="link" href="#programa">Programa</a></li>
+              <li><a class="link" href="#desafio">Desafio</a></li>
+              <li><a class="link" href="#colaboradores">Colaboradores</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="c-slider" id="c-slider">
+          <div class="slider" id="slider">
+            <section class="slider-section"><img class="slider-img" src="img/1.jpg" alt=""/></section>
+            <section class="slider-section"><img class="slider-img" src="img/2.jpg" alt=""/></section>
+            <section class="slider-section"><img class="slider-img" src="img/3.jpg" alt=""/></section>
+          </div>
+          <div class="btn-prev" id="btn-prev">&#60;</div>
+          <div class="btn-next" id="btn-next">&#62;</div>
         </div>
-        <div class="btn-prev" id="btn-prev">&#60;</div>
-        <div class="btn-next" id="btn-next">&#62;</div>
+        <main class="c-main l-container-item">
+          <section class="c-programa" id="programa">
+            <article class="c-programa-item">
+              <h2 class="c-programa-title">Programa</h2>
+              <p class="c-programa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p><a class="c-programa-button" href="#oculto">saber más</a>
+            </article>
+            <div class="c-programa-item"><img class="c-programa-img" src="img/programa.jpg" alt="programa"/></div>
+          </section>
+          <section class="capa c-programa" id="oculto">
+            <article class="c-programa-item">
+              <h2 class="c-programa-title">Oculto</h2>
+              <p class="c-programa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
+            </article>
+            <div class="c-programa-item"><img class="c-programa-img" src="img/programa.jpg" alt="programa"/></div>
+          </section>
+          <section class="c-desafio" id="desafio">
+            <h1 class="title">Desafio</h1>
+            <section class="c-desafio-item" id="modal1">
+              <h2 class="c-desafio-title">Desafio 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper.</p>
+            </section>
+            <section class="c-desafio-item" id="modal2">
+              <h2 class="c-desafio-title">Desafio 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
+            </section>
+            <section class="c-desafio-item" id="modal3">
+              <h2 class="c-desafio-title">Desafio 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
+            </section>
+            <section class="c-desafio-item" id="modal4">
+              <h2 class="c-desafio-title">Desafio 4</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
+            </section>
+          </section>
+          <section class="c-colaboradores" id="colaboradores">
+            <h1 class="title">Colaboradores</h1>
+            <section class="c-colaboradores-item">
+              <h2 class="c-colaboradores-title">Colaborador 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
+            </section>
+            <section class="c-colaboradores-item">
+              <h2 class="c-colaboradores-title">Colaborador 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
+            </section>
+            <section class="c-colaboradores-item">
+              <h2 class="c-colaboradores-title">Colaborador 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
+            </section>
+            <section class="c-colaboradores-item">
+              <h2 class="c-colaboradores-title">Colaborador 4</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
+            </section>
+          </section>
+        </main>
+        <footer class="c-footer">
+          <section class="c-footer-item">
+            <h2 class="c-footer-title">Dirección</h2>
+            <p>Av. Sin Nombre #1234</p>
+            <p>Comuna de Sin nombre</p>
+            <p>V Region</p>
+          </section>
+          <section class="c-footer-item">
+            <h2 class="c-footer-title">Contacto</h2>
+            <p>E-mail: contacto@innovaantofagasta.cl</p>
+            <p>Teléfono: +569 12345678</p>
+          </section>
+          <section class="c-footer-item">
+            <h2 class="c-footer-title">Síguenos</h2>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Youtube</p>
+          </section>
+          <section class="copyright">
+            <p>Diseñado por Esfera Digital</p>
+          </section>
+          <button id="subir">&#8679;</button>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="es5/index.js"></script>
       </div>
-      <main class="c-main">
-        <section class="c-programa" id="programa">
-          <article class="c-programa-item">
-            <h2 class="c-programa-title">Programa</h2>
-            <p class="c-programa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-            <button class="c-programa-button">saber más</button>
-          </article>
-          <div class="c-programa-item"><img class="c-programa-img" src="img/programa.jpg" alt="programa"/></div>
-        </section>
-        <section class="capa c-programa">
-          <article class="c-programa-item">
-            <h2 class="c-programa-title">Oculto</h2>
-            <p class="c-programa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-          </article>
-          <div class="c-programa-item"><img class="c-programa-img" src="img/programa.jpg" alt="programa"/></div>
-        </section>
-        <section class="c-desafio" id="desafio">
-          <h1 class="title">Desafio</h1>
-          <section class="c-desafio-item" id="modal1">
-            <h2 class="c-desafio-title">Desafio 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper.</p>
-          </section>
-          <section class="c-desafio-item" id="modal2">
-            <h2 class="c-desafio-title">Desafio 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
-          </section>
-          <section class="c-desafio-item" id="modal3">
-            <h2 class="c-desafio-title">Desafio 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
-          </section>
-          <section class="c-desafio-item" id="modal4">
-            <h2 class="c-desafio-title">Desafio 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis hendrerit tortor, non vehicula risus. Fusce ac varius lorem. In cursus finibus vehicula. Proin bibendum eleifend lectus ut ullamcorper. </p>
-          </section>
-        </section>
-        <section class="c-colaboradores" id="colaboradores">
-          <h1 class="title">Colaboradores</h1>
-          <section class="c-colaboradores-item">
-            <h2 class="c-colaboradores-title">Colaborador 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-          </section>
-          <section class="c-colaboradores-item">
-            <h2 class="c-colaboradores-title">Colaborador 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-          </section>
-          <section class="c-colaboradores-item">
-            <h2 class="c-colaboradores-title">Colaborador 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-          </section>
-          <section class="c-colaboradores-item">
-            <h2 class="c-colaboradores-title">Colaborador 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at iaculis mi, vitae aliquet lacus. Donec libero dui, malesuada ac massa eu, pellentesque vestibulum odio. Suspendisse potenti. Integer sed odio viverra, aliquam sem vel, porta elit. Aliquam cursus congue orci, a lobortis erat pulvinar eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer vulputate ligula vel egestas molestie. Etiam interdum vitae nunc tristique dapibus. Donec semper ultrices tristique. Curabitur vel nisl eget lectus eleifend tincidunt nec a eros.Pellentesque quis diam euismod, vulputate turpis et, finibus leo. Aliquam convallis gravida molestie. Nunc nec mauris at nulla fringilla congue. Praesent venenatis est tortor, eget tempus nulla sodales non.</p>
-          </section>
-        </section>
-      </main>
-      <footer class="c-footer">
-        <section class="c-footer-item">
-          <h2 class="c-footer-title">Dirección</h2>
-          <p>Av. Sin Nombre #1234</p>
-          <p>Comuna de Sin nombre</p>
-          <p>V Region</p>
-        </section>
-        <section class="c-footer-item">
-          <h2 class="c-footer-title">Contacto</h2>
-          <p>E-mail: contacto@innovaantofagasta.cl</p>
-          <p>Teléfono: +569 12345678</p>
-        </section>
-        <section class="c-footer-item">
-          <h2 class="c-footer-title">Síguenos</h2>
-          <p>Facebook</p>
-          <p>Twitter</p>
-          <p>Youtube</p>
-        </section>
-        <section class="copyright">
-          <p>Diseñado por Esfera Digital</p>
-        </section>
-        <button id="subir">&#8679;</button>
-      </footer>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <script src="es5/onepagescroll.js"></script>
-      <script>$(document).ready(function(){
-  $('.link').onePageScrolling()
-})
-  </script>
-  <script src="es5/index.js"></script>
     </body>
   </head>
 </html>

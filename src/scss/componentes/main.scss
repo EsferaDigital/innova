@@ -1,6 +1,3 @@
 .c-main{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
+	@include c-wrap;
 }

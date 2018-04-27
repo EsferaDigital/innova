@@ -1,18 +1,21 @@
 .c-programa{
 	@include c-wrap;
 	height: auto;
-	background-color: rgba(245, 245, 245, 0.952);
+	margin-top: $gutter;
 	&-item{
 		@include i-wrap;
 		width: 100%;
 		padding: $gutter;
-		margin: .5rem;
-		background-color: white;
-		border: 1px solid black;
-		box-shadow: 7px 7px 7px;
+		margin: 0;
+		background-color: color(bg-item);
+		border: .5px solid black;
+		box-shadow: $sombra-flat;
 		@include mq($medium){
 			width: 45%;
 		}
+	}
+	&-item:first-child{
+		margin-right: .5rem;
 	}
 	&-title{
 		letter-spacing: 2px;

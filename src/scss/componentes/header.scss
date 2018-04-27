@@ -4,7 +4,7 @@
 	width: 100%;
 	height: auto;
 	justify-content: space-between;
-	z-index: 999;
+	z-index: z-index(capa10);
 	// background-color: color(primary);
 	padding: $gutter;
 	transition: all .4s ease;
@@ -19,7 +19,7 @@
 		position: relative;
 		font-size: 2rem;
 		padding: 0 $gutter;
-		z-index: 1000;
+		z-index: z-index(capa4);
 		color: black;
 		background-color: color(primary);
 		cursor: pointer;
@@ -36,7 +36,7 @@
 	height: 100vh;
 	padding: 1rem;
 	padding-top: rem(100px);
-	z-index: 200;
+	z-index: z-index(capa5);
 	transition: all .4s;
 	& ul{
 		display: block;
