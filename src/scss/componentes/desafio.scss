@@ -1,28 +1,65 @@
 .c-desafio{
-	@include c-wrap;
+	width: 100%;
 	padding: $gutter;
-	margin-top: $gutter;
+	background-color: teal;
+}
+
+.content-desafio{
+	@include c-wrap;
+	background-color: transparent;
+	justify-content: space-around;
+	padding: $gutter;
+	margin: $gutter auto;
 	&-item{
 		@include i-wrap;
-		width: 100%;
+		width: 97%;
 		padding: $gutter;
-		border: 1px solid black;
+		background-color: color(bg-item);
+		margin-right: $gutter-item;
 		@include mq($medium){
-			width: 50%;
+			width: 42%;
 		}
 		@include mq($large){
-			width: 25%;
+			width: 22%;
 		}
 	}
+	&-item:last-child{
+		margin-right: 0;
+	}
 	&-item:hover{
-		background-color: red;
+		box-shadow: $shadow-flat;
 	}
 }
+
 
 .title{
 	text-align: center;
 	width: 100%;
 	margin-bottom: .5rem;
+	//font-family: $primary-font;
+}
+
+.content-desafio2{
+	@include c-wrap;
+	width: 100%;
+	padding: 5rem;
+	border: 1px solid red;
+	&-title{
+		@include i-wrap;
+		width: 100%;
+		//font-family: $primary-font;
+		@include mq($medium){
+			width: 47%;
+		}
+	}
+	&-text{
+		@include i-wrap;
+		width: 100%;
+		//font-family: $secondary-font;
+		@include mq($medium){
+			width: 47%;
+		}
+	}
 }
 
 //Estilos para el Modal

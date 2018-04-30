@@ -5,23 +5,22 @@
 	height: auto;
 	justify-content: space-between;
 	z-index: z-index(capa10);
-	// background-color: color(primary);
 	padding: $gutter;
-	transition: all .4s ease;
 	border: 1px solid red;
+	transition: all .4s ease;
 	opacity: .8;
 	&-logo{
-		width: 5%;
+		width: 20vw;
 		height: auto;
 		padding: 0 $gutter;
+		border: 1px solid yellow;
 	}
 	&-menu{
 		position: relative;
 		font-size: 2rem;
 		padding: 0 $gutter;
-		z-index: z-index(capa4);
-		color: black;
-		background-color: color(primary);
+		z-index: z-index(capa6);
+		color: white;
 		cursor: pointer;
 	}
 }
@@ -42,12 +41,15 @@
 		display: block;
 	}
 	& li{
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid color(secondary);
 	}
 	& a{
 		display: block;
 		position: relative;
+		font-family: $primary-font;
 		text-transform: uppercase;
+		font-weight: $bold;
+		letter-spacing: 2px;
 		line-height: 3;
 		color: white;
 	}

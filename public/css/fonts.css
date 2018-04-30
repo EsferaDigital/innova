@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "innova";
+  src:url("/fonts/innova.eot");
+  src:url("/fonts/innova.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/innova.woff") format("woff"),
+    url("/fonts/innova.ttf") format("truetype"),
+    url("/fonts/innova.svg#innova") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "innova" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "innova" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\61";
+}
+.icon-angle-right:before {
+  content: "\62";
+}
+.icon-angle-left:before {
+  content: "\63";
+}
+.icon-phone:before {
+  content: "\64";
+}
+.icon-paper-airplane:before {
+  content: "\65";
+}
+.icon-facebook:before {
+  content: "\66";
+}
+.icon-social-instagram-outline:before {
+  content: "\67";
+}
+.icon-twitter:before {
+  content: "\68";
+}
+.icon-download:before {
+  content: "\69";
+}
+.icon-shop:before {
+  content: "\6b";
+}
+.icon-bulb:before {
+  content: "\6c";
+}
+.icon-truck:before {
+  content: "\6d";
+}
+.icon-aim:before {
+  content: "\6e";
+}
+.icon-amazon:before {
+  content: "\6f";
+}
+.icon-behance:before {
+  content: "\70";
+}
+.icon-meetup:before {
+  content: "\71";
+}
+.icon-krop:before {
+  content: "\72";
+}
+.icon-ping:before {
+  content: "\73";
+}
+.icon-bar-chart:before {
+  content: "\6a";
+}
+.icon-briefcase:before {
+  content: "\74";
+}
+.icon-diamond:before {
+  content: "\75";
+}
+.icon-eyedropper:before {
+  content: "\76";
+}
+.icon-flask:before {
+  content: "\77";
+}
+.icon-industry:before {
+  content: "\78";
+}
+.icon-calculator:before {
+  content: "\79";
+}
+.icon-compass:before {
+  content: "\7a";
+}
+.icon-ios-color-wand:before {
+  content: "\41";
+}

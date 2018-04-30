@@ -2,15 +2,10 @@
 
  $off-canvas: 11rem; //modificar segun necesidad o mejora
 
-// Ancho de cajas
-
- $max-width: 1400px;
- $max-width-item: 1280px;
- 
-
  //Gutter para las separaciones
 
  $gutter: 1rem;
+ $gutter-item: .5rem;
 
  // variables para z-index
 
@@ -53,6 +48,11 @@
 // 	@include c-wrap();
 // 	font-family: sans-serif;
 // }
+
+// Ancho de cajas
+
+ $max-width: 1400px;
+ $max-width-item: 1280px;
 
 .l-container{
 	max-width: $max-width;

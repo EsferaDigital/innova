@@ -1,10 +1,27 @@
 // Importar Tipografía
 
- @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Merriweather|Montserrat|Noto+Sans|Noto+Serif|Open+Sans|Poiret+One');
 
- $main-font: 'Roboto', sans-serif; //Tipo de fuente
+// font-family: 'Poiret One', cursive;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Bitter', serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+// principal y secundaria{
+// 	poiret-one : open sans,
+// 	bitter : open sans,
+// 	merriweather : open sans o montserrat,
+// 	noto-serif : noto sans u open sans
+// }
+
+ $primary-font: 'Poiret One', cursive; //Tipo de fuente
+ $secondary-font: 'Open Sans', sans-serif; 
  $light: 300; //Ancho de fuente
  $normal: 400; //Ancho de fuente
+ $bold: 600;
 
  //Tamaños de fuentes
 
