@@ -26,6 +26,8 @@
  //Tamaños de fuentes
 
  $font-size: em(14px);
- $h3-size: $font-size * 1.15;
- $h2-size: $font-size * 1.35;
- $h1-size: $font-size * 1.7;
+ $title: $font-size * 2;
+ $sub-title: $font-size * 1.7;
+ $big-title: $font-size * 3;
+
+ $icon: $font-size * 3;

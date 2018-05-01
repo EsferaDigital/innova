@@ -4,6 +4,7 @@
 	margin: auto;
 	overflow: hidden;
 	box-shadow: $shadow-flat;
+	border: 1px solid red;
 }
 
 .slider{
@@ -27,11 +28,24 @@
 
 .botones{
 	display: flex;
-	width: 30%;
+	width: 80%;
 	position: absolute;
 	justify-content: space-between;
 	z-index: 1;
 	transform: translate(0, 100%);
+	border: 1px solid red;
+	&-uno{
+		background-color: color(cta);
+		&:hover{
+			background-color: darken(color(cta),5);
+		}
+	}
+	&-dos{
+		background-color: color(secondary);
+		&:hover{
+			background-color: darken(color(secondary),5);
+		}
+	}
 }
 
 .slider > section{
@@ -62,6 +76,7 @@
 .slider-img-3{	background-image: url('../img/3.jpg');}
 
 .btn-prev, .btn-next{
+	display: none;
 	width: rem(40px);
 	height: rem(40px);
 	background-color: rgba(255, 255, 255, 0.7);
@@ -77,6 +92,9 @@
 	cursor: pointer;
 	&:hover{
 		background-color: rgba(255, 255, 255, 1);
+	}
+	@include mq($medium){
+		display: block;
 	}
 }
 

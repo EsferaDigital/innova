@@ -1,6 +1,7 @@
 .c-desafio{
 	width: 100%;
-	padding: $gutter;
+	//padding: $gutter;
+	margin: .5rem auto $gutter 0;
 	background-color: teal;
 }
 
@@ -9,18 +10,22 @@
 	background-color: transparent;
 	justify-content: space-around;
 	padding: $gutter;
-	margin: $gutter auto;
 	&-item{
 		@include i-wrap;
 		width: 97%;
 		padding: $gutter;
+		margin-bottom: $gutter-item;
+		font-family: $secondary-font;
 		background-color: color(bg-item);
-		margin-right: $gutter-item;
 		@include mq($medium){
 			width: 42%;
+			margin-right: $gutter-item;
 		}
 		@include mq($large){
 			width: 22%;
+		}
+		& p{
+			padding: $gutter;
 		}
 	}
 	&-item:last-child{
@@ -29,14 +34,28 @@
 	&-item:hover{
 		box-shadow: $shadow-flat;
 	}
+	&-icon{
+		margin: auto;
+		text-align: center;
+		font-size: $icon;
+		color: color(cta);
+		padding: $gutter;
+	}
+	&-title{
+		text-align: center;
+		font-family: $primary-font;
+		font-size: $sub-title;
+		font-weight: $bold;
+	}
 }
 
 
 .title{
 	text-align: center;
 	width: 100%;
-	margin-bottom: .5rem;
-	//font-family: $primary-font;
+	margin-bottom: $gutter-item;
+	color: color(bg-item);
+	font-family: $primary-font;
 }
 
 .content-desafio2{

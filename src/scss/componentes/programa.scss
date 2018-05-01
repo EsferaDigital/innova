@@ -1,22 +1,23 @@
 .c-programa{
 	@include c-wrap;
 	height: auto;
-	padding: $gutter;
-	margin: $gutter auto;
+	//padding: $gutter;
+	margin: .5rem auto 0 0;
+	// border: 1px solid red;
 	&-item{
 		@include i-wrap;
 		width: 100%;
-		padding: $gutter;
+		padding: 0 $gutter;
 		margin: 0;
 		background-color: color(bg-item);
-		// border: .5px solid black;
 		box-shadow: $shadow-flat;
+		border: 1px solid red;
 		@include mq($medium){
 			width: 45%;
 		}
 	}
 	&-item:first-child{
-		margin-right: $gutter-item;
+		//margin-right: $gutter-item;
 	}
 	&-title{
 		margin: $gutter;
@@ -30,9 +31,12 @@
 		letter-spacing: 2px;
 	}
 	&-button{
-		margin: $gutter;
+		// margin: $gutter;
 		margin-right: 0;
 		float: right;
+		color: color(primary);
+		font-size: 2rem;
+		transform: rotate(90deg);
 	}
 	&-img{
 		width: 100%;
