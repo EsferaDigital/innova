@@ -1,21 +1,56 @@
 .c-desafio{
+	position: relative;
 	width: 100%;
 	//padding: $gutter;
+	height: 84rem;
 	margin: .5rem auto $gutter 0;
-	background-color: teal;
+	background-color: color(bg);
+	&-banner{
+		width: 100%;
+		position: relative;
+		top: 0;
+		height: 15rem;
+		background-size: cover;
+		background-position: center;
+		background-image: url('../img/banner-desafio.jpg');
+		&::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: color(primary);
+			opacity: .8;
+		}
+		&-title{
+			position: relative;
+			text-align: center;
+			width: 100%;
+			z-index: 1;
+			color: color(bg-item);
+			padding: $gutter;
+			font-family: $primary-font;
+			font-size: $big-title;
+		}
+	}
 }
 
 .content-desafio{
 	@include c-wrap;
+	position: absolute;
+   top: 7%;
 	background-color: transparent;
 	justify-content: space-around;
 	padding: $gutter;
+	border: 1px solid red;
 	&-item{
 		@include i-wrap;
 		width: 97%;
 		padding: $gutter;
 		margin-bottom: $gutter-item;
 		font-family: $secondary-font;
+		box-shadow: $shadow-flat;
 		background-color: color(bg-item);
 		@include mq($medium){
 			width: 42%;
@@ -49,24 +84,20 @@
 	}
 }
 
-
-.title{
-	text-align: center;
-	width: 100%;
-	margin-bottom: $gutter-item;
-	color: color(bg-item);
-	font-family: $primary-font;
-}
-
 .content-desafio2{
 	@include c-wrap;
+   position: absolute;
 	width: 100%;
-	padding: 5rem;
+	padding: 0 $gutter;
+	bottom: 0;
+	background-color: color(bg-item);
+	box-shadow: $shadow-flat;
 	border: 1px solid red;
 	&-title{
 		@include i-wrap;
 		width: 100%;
-		//font-family: $primary-font;
+		padding: $gutter 0;
+		font-family: $primary-font;
 		@include mq($medium){
 			width: 47%;
 		}
@@ -74,12 +105,15 @@
 	&-text{
 		@include i-wrap;
 		width: 100%;
-		//font-family: $secondary-font;
+		padding: $gutter 0;
+		font-family: $secondary-font;
 		@include mq($medium){
 			width: 47%;
 		}
 	}
 }
+
+
 
 //Estilos para el Modal
 
@@ -92,8 +126,8 @@
 	height: 100vh;
 	background-color: rgba(#000, .8);
 	&-item{
-		width: 90%;
-		height: 90vh;
+		width: 80%;
+		height: 80vh;
 		margin: auto;
 		background-color: azure;
 	}
