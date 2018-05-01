@@ -1,17 +1,50 @@
 .c-colaboradores{
 	@include c-wrap;
+	width: 100%;
 	padding: $gutter;
-	border: 1px solid violet;
+	margin: $gutter-item auto 0 0;
+	background-color: color(secondary);
+	&-title{
+		text-align: center;
+		width: 100%;
+		color: black;
+		padding: $gutter-item;
+		font-family: $primary-font;
+		font-size: $title;
+	}
 	&-item{
 		@include i-wrap;
-		width: 100%;
+		max-width: 97%;
+		margin: auto;
 		padding: $gutter;
-		border: 1px solid teal;
+		margin-bottom: $gutter-item;
+		font-family: $secondary-font;
+		box-shadow: $shadow-flat;
+		background-color: color(bg-item);
+		border: 1px solid red;
 		@include mq($medium){
 			width: 50%;
 		}
 		@include mq($large){
 			width: 25%;
 		}
+	}
+	&-icon{
+		margin: auto;
+		text-align: center;
+		font-size: $icon;
+		color: color(cta);
+		padding: 0 $gutter-item;
+	}
+	&-subtitle{
+		text-align: center;
+		width: 100%;
+		color: black;
+		padding: $gutter-item;
+		font-family: $primary-font;
+		font-size: $sub-title;
+	}
+	& p{
+		text-align: center;
 	}
 }

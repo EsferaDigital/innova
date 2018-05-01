@@ -22,7 +22,9 @@
 	&-title{
 		margin: $gutter;
 		margin-left: 0;
-		//font-family: $primary-font;
+		text-align: center;
+		font-family: $primary-font;
+		font-size: $title;
 		letter-spacing: 2px;
 	}
 	&-text{

@@ -2,8 +2,8 @@
 	position: relative;
 	width: 100%;
 	//padding: $gutter;
-	height: 84rem;
-	margin: .5rem auto $gutter 0;
+	height: 87rem;
+	margin: $gutter-item auto $gutter 0;
 	background-color: color(bg);
 	&-banner{
 		width: 100%;
@@ -60,6 +60,7 @@
 			width: 22%;
 		}
 		& p{
+			text-align: center;
 			padding: $gutter;
 		}
 	}

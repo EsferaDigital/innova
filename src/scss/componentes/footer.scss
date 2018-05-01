@@ -1,28 +1,45 @@
 .c-footer{
 	@include c-wrap;
 	color: white;
-	background-color: color(primary);
+	background-color: color(footer);
 	&-item{
 		@include i-wrap;
 		width: 100%;
 		padding: $gutter;
+		text-align: center;
 		@include mq($medium){
 			width: 33%;
 		}
+	}
+	&-title{
+		padding: $gutter-item;
+		font-family: $primary-font;
+		font-size: $sub-title;
 	}
 }
 
 .copyright{
 	display: block;
 	width: 100%;
+	padding: $gutter-item;
 	text-align: center;
+	& p{
+		font-size: .9rem;
+		& a{
+			color: white;
+		}
+	}
 }
 
 #subir{
 	display: none;
+	text-align: center;
 	position: fixed;
+	padding: .2rem .1rem 0 .2rem;
+	background-color: color(cta);
 	bottom: 10%;
+	transform: rotate(90deg);
 	right: 5%;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	cursor: pointer;
 }

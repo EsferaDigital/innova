@@ -1,0 +1,15 @@
+.c-patrocinadores{
+	@include c-wrap;
+	width: 100%;
+	background-color: color(primary);
+	&-item{
+		@include i-wrap;
+		padding-top: .7rem;
+		width: 25%;
+		text-align: center;
+		font-size: $icon;
+		height: 1.5;
+		line-height: 1.5;
+		color: white;
+	}
+}
