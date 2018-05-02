@@ -3,7 +3,10 @@
 	height: auto;
 	//padding: $gutter;
 	margin: .5rem auto 0 0;
-	// border: 1px solid red;
+	@include mq($large){
+		padding: $gutter;
+		margin: 0;
+	}
 	&-item{
 		@include i-wrap;
 		width: 100%;
@@ -11,13 +14,21 @@
 		margin: 0;
 		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
-		border: 1px solid red;
+		//border: 1px solid red;
 		@include mq($medium){
 			width: 45%;
 		}
 	}
 	&-item:first-child{
-		//margin-right: $gutter-item;
+		margin-right: 0;
+		@include mq($medium){
+			margin-right: $gutter-item;
+		}
+	}
+	&-item:last-child{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	&-title{
 		margin: $gutter;
@@ -26,6 +37,9 @@
 		font-family: $primary-font;
 		font-size: $title;
 		letter-spacing: 2px;
+		@include mq($medium){
+			text-align: left;
+		}
 	}
 	&-text{
 		color: color(text-dark);
@@ -38,8 +52,15 @@
 		float: right;
 	}
 	&-img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: auto;
-		padding: $gutter;	
+		padding: $gutter;
+		& img{
+			display: block;
+			height: auto;
+		}	
 	}
 }

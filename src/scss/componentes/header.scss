@@ -6,18 +6,29 @@
 	justify-content: space-between;
 	z-index: z-index(capa10);
 	padding: $gutter;
-	border: 1px solid red;
 	transition: all .4s ease;
 	opacity: .8;
 	&-logo{
 		width: 20vw;
 		height: auto;
 		padding: 0 $gutter;
-		border: 1px solid yellow;
+		@include mq($movil1){
+			width: 15vw;
+		}
+		@include mq($medium){
+			width: 10vw;
+		}
+		@include mq($large){
+			width: 7vw;
+		}
+		@include mq($x-large){
+			width: 4vw;
+		}
 	}
 	&-menu{
 		position: relative;
 		font-size: 2rem;
+		top: .5rem;
 		padding: 0 $gutter;
 		z-index: z-index(capa6);
 		color: color(cta);

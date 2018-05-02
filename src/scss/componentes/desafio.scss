@@ -1,10 +1,25 @@
 .c-desafio{
 	position: relative;
 	width: 100%;
-	//padding: $gutter;
-	height: 87rem;
+	//desde 320px de vw;
+	height: 93rem;
 	margin: $gutter-item auto $gutter 0;
 	background-color: color(bg);
+	@include mq($movil1){
+		height: 87rem;
+	}
+	@include mq($movil2){
+		height: 84rem;
+	}
+	@include mq($small){
+		height: 83rem;
+	}
+	@include mq($medium){
+		height: 50rem;
+	}
+	@include mq($large){
+		height: 31rem;
+	}
 	&-banner{
 		width: 100%;
 		position: relative;
@@ -43,7 +58,13 @@
 	background-color: transparent;
 	justify-content: space-around;
 	padding: $gutter;
-	border: 1px solid red;
+	//border: 1px solid red;
+	@include mq($medium){
+		top: 10%;
+	}
+	@include mq($large){
+		top: 12%;
+	}
 	&-item{
 		@include i-wrap;
 		width: 97%;
@@ -64,8 +85,17 @@
 			padding: $gutter;
 		}
 	}
+	&-item:nth-child(even){
+		margin-right: 0;
+		@include mq($large){
+			margin-right: $gutter-item;
+		}
+	}
 	&-item:last-child{
 		margin-right: 0;
+		@include mq($large){
+			margin-right: 0;
+		}
 	}
 	&-item:hover{
 		box-shadow: $shadow-flat;
@@ -93,7 +123,7 @@
 	bottom: 0;
 	background-color: color(bg-item);
 	box-shadow: $shadow-flat;
-	border: 1px solid red;
+	//border: 1px solid red;
 	&-title{
 		@include i-wrap;
 		width: 100%;

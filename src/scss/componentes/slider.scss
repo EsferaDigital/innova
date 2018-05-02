@@ -4,7 +4,6 @@
 	margin: auto;
 	overflow: hidden;
 	box-shadow: $shadow-flat;
-	border: 1px solid red;
 }
 
 .slider{
@@ -33,7 +32,13 @@
 	justify-content: space-between;
 	z-index: 1;
 	transform: translate(0, 100%);
-	border: 1px solid red;
+	//border: 1px solid red;
+	@include mq($medium){
+		width: 40%;
+	}
+	@include mq($large){
+		width: 30%;
+	}
 }
 
 .slider > section{
@@ -65,14 +70,16 @@
 
 .btn-prev, .btn-next{
 	display: none;
-	width: rem(40px);
-	height: rem(40px);
+	//width: rem(40px);
+	//height: rem(40px);
+	padding: $gutter-item;
 	background-color: rgba(255, 255, 255, 0.7);
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	line-height: rem(40px);
+	//line-height: rem(40px);
 	font-size: 22px;
+	color: white;
 	font-weight: bold;
 	text-align: center;
 	font-family: monospace;
@@ -80,6 +87,7 @@
 	cursor: pointer;
 	&:hover{
 		background-color: rgba(255, 255, 255, 1);
+		color: color(cta);
 	}
 	@include mq($medium){
 		display: block;
