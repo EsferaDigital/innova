@@ -33,12 +33,9 @@
 		letter-spacing: 2px;
 	}
 	&-button{
-		// margin: $gutter;
+		margin: $gutter;
 		margin-right: 0;
 		float: right;
-		color: color(primary);
-		font-size: 2rem;
-		transform: rotate(90deg);
 	}
 	&-img{
 		width: 100%;

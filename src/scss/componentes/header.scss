@@ -20,7 +20,7 @@
 		font-size: 2rem;
 		padding: 0 $gutter;
 		z-index: z-index(capa6);
-		color: white;
+		color: color(cta);
 		cursor: pointer;
 	}
 }
@@ -41,7 +41,7 @@
 		display: block;
 	}
 	& li{
-		border-bottom: 1px solid color(secondary);
+		border-bottom: 1px solid color(cta);
 	}
 	& a{
 		display: block;

@@ -16,8 +16,8 @@
 	}
 	&-text{
 		position: absolute;
-		//font-family: $primary-font;
-		font-size: 3rem;
+		font-family: $primary-font;
+		font-size: $big-title;
 		font-weight: $bold;
 		text-transform: uppercase;
 		transform: translate(0, -100%);
@@ -34,18 +34,6 @@
 	z-index: 1;
 	transform: translate(0, 100%);
 	border: 1px solid red;
-	&-uno{
-		background-color: color(cta);
-		&:hover{
-			background-color: darken(color(cta),5);
-		}
-	}
-	&-dos{
-		background-color: color(secondary);
-		&:hover{
-			background-color: darken(color(secondary),5);
-		}
-	}
 }
 
 .slider > section{

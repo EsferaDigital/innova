@@ -10,6 +10,21 @@
 		@include mq($medium){
 			width: 33%;
 		}
+		& a{
+			width: 100%;
+			font-size: 2rem;
+			display: inline-block;
+			text-align: center;
+			color: white;
+			opacity: .5;
+			&:hover{
+				opacity: 1;
+			}
+		}
+		& p{
+			font-size: 1rem;
+			padding: .3rem;
+		}
 	}
 	&-title{
 		padding: $gutter-item;
@@ -23,6 +38,7 @@
 	width: 100%;
 	padding: $gutter-item;
 	text-align: center;
+	background-color: darken(color(footer), 2%);
 	& p{
 		font-size: .9rem;
 		& a{

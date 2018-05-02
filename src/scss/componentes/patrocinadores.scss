@@ -1,7 +1,7 @@
 .c-patrocinadores{
 	@include c-wrap;
 	width: 100%;
-	background-color: color(primary);
+	background-color: color(cta);
 	&-item{
 		@include i-wrap;
 		padding-top: .7rem;
