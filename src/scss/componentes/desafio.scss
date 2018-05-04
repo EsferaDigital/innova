@@ -2,23 +2,23 @@
 	position: relative;
 	width: 100%;
 	//desde 320px de vw;
-	height: 93rem;
+	height: 67.5rem;
 	margin: $gutter-item auto $gutter 0;
 	background-color: color(bg);
 	@include mq($movil1){
-		height: 87rem;
+		height: 64.5rem;
 	}
 	@include mq($movil2){
-		height: 84rem;
+		height: 64rem;
 	}
 	@include mq($small){
-		height: 83rem;
+		height: 62.5rem;
 	}
 	@include mq($medium){
-		height: 50rem;
+		height: 35rem;
 	}
 	@include mq($large){
-		height: 31rem;
+		height: 20rem;
 	}
 	&-banner{
 		width: 100%;
@@ -60,10 +60,10 @@
 	padding: $gutter;
 	//border: 1px solid red;
 	@include mq($medium){
-		top: 10%;
+		top: 13%;
 	}
 	@include mq($large){
-		top: 12%;
+		top: 20%;
 	}
 	&-item{
 		@include i-wrap;
@@ -98,7 +98,9 @@
 		}
 	}
 	&-item:hover{
-		box-shadow: $shadow-flat;
+		background-color: color(secondary);
+		color: white;
+		cursor: pointer;
 	}
 	&-icon{
 		margin: auto;
@@ -115,37 +117,6 @@
 	}
 }
 
-.content-desafio2{
-	@include c-wrap;
-   position: absolute;
-	width: 100%;
-	padding: 0 $gutter;
-	bottom: 0;
-	background-color: color(bg-item);
-	box-shadow: $shadow-flat;
-	//border: 1px solid red;
-	&-title{
-		@include i-wrap;
-		width: 100%;
-		padding: $gutter 0;
-		font-family: $primary-font;
-		@include mq($medium){
-			width: 47%;
-		}
-	}
-	&-text{
-		@include i-wrap;
-		width: 100%;
-		padding: $gutter 0;
-		font-family: $secondary-font;
-		@include mq($medium){
-			width: 47%;
-		}
-	}
-}
-
-
-
 //Estilos para el Modal
 
 .c-modal{
@@ -155,11 +126,25 @@
 	z-index: z-index(capa10);
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(#000, .8);
+	background-color: rgba(0, 116, 162, 0.8);
+	&::before{
+		content: "✕";
+		color: white;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		opacity: .7;
+	}
 	&-item{
-		width: 80%;
-		height: 80vh;
+		width: 92%;
+		max-width: $max-width;
+		height: 85vh;
 		margin: auto;
+		overflow-y: scroll;
 		background-color: azure;
+		& iframe{
+			height: 100%;
+		}
 	}
 }

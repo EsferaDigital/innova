@@ -7,7 +7,7 @@
 	z-index: z-index(capa10);
 	padding: $gutter;
 	transition: all .4s ease;
-	opacity: .8;
+	//opacity: .8;
 	&-logo{
 		width: 20vw;
 		height: auto;
@@ -74,6 +74,7 @@
 
 .show-header{
 	top: 0;
+	background-color: ligthen(color(primary));
 }
 
 .show-menu{

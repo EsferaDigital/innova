@@ -7,12 +7,12 @@ var prev = $('#btn-prev')
 //Movemos ultima imagen al primer lugar
 $('#slider section:last').insertBefore('#slider section:first')
 
-slider.css('margin-left', '-'+100+'%')
+slider.css('margin-left', '-' + 100 + '%')
 
-function moverD(){
+function moverD() {
 	slider.animate({
-		marginLeft: '-'+200+'%'
-	}, 700, function(){
+		marginLeft: '-' + 200 + '%'
+	}, 700, function () {
 		$('#slider section:first').insertAfter('#slider section:last')
 		slider.css('margin-left', '-' + 100 + '%')
 	})
@@ -27,16 +27,16 @@ function moverI() {
 	})
 }
 
-next.on('click', function(){
+next.on('click', function () {
 	moverD()
 })
 
-prev.on('click', function(){
+prev.on('click', function () {
 	moverI()
 })
 
-function autoplay(){
-	setInterval(function(){
+function autoplay() {
+	setInterval(function () {
 		moverD()
 	}, 5000)
 }
@@ -45,23 +45,50 @@ autoplay()
 
 //Fin Slider
 
-// Navegacion
-
 //One Page scroll
 
-function onePageScroll(e){
-	e.preventDefault()	
+function onePageScroll(e) {
+	e.preventDefault()
 	var idLink = $(this).attr('href'),
-		 coordSection = $(idLink).offset().top
+		coordSection = $(idLink).offset().top
 
 	$('html, body').animate({
-		scrollTop : coordSection
+		scrollTop: coordSection
 	}, 1000)
 }
 
 //ejecutamos la funcion onePageScroll en el eventos click de cada enlace
 
 $('.link').on('click', onePageScroll)
+
+//Fin onepage scroll
+
+
+//Efectos y animaciones
+
+function efectos(){
+	$('#up').on('click', function () {
+		$('html, body').animate({
+			scrollTop: 0,
+			scrollLeft: 0
+		}, 1000)
+	})
+}
+
+function showUp() {
+	var scrollVertical = $(window).scrollTop(),
+		scrollHorizontal = $(window).scrollLeft()
+	//console.log(scrollVertical, scrollHorizontal)	
+	//Si scrollVertical es mayor a 700px al id up añadele un fadeIn, sino añadele un fadeOut
+	return (scrollVertical > 700) ? $('#up').fadeIn() : $('#up').fadeOut()
+}
+
+//ejecutamos la funcion efectos cuando el documento esté cargado
+$(document).ready(efectos)
+//ejecutamos la funcion showUp cuando la ventana esté cargada
+$(window).on('scroll', showUp)
+
+// JS Puro
 
 // Capturamos los elementos
 
@@ -93,16 +120,13 @@ function showHideHeader() {
 
 	if (st > lastScrollTop) {
 		header.classList.replace('show-header', 'hide-header')
-		
+
 	} else {
 		header.classList.replace('hide-header', 'show-header')
 	}
-	
+
 	lastScrollTop = st;
 }
-
-//Oculta el header al ir a un link
-
 
 //Ejecutamos las funciones
 
@@ -115,37 +139,6 @@ window.addEventListener('scroll', showHideHeader, false);
 for (let n = 0; n < itemLink.length; n++) {
 	itemLink[n].addEventListener('click', showHideMenu)
 }
-
-//Fin Navegacion
-
-//Efectos y animaciones
-
-function efectos(){
-	//Muestra seccion oculta
-	$('.c-programa-button').on('click', function(){
-		//velocidades fast, slow y swing
-		$('.capa').slideToggle()
-	})
-	//Acciona el boton subir
-	$('#subir').on('click', function(){
-		$('html, body').animate({
-			scrollTop : 0,
-			scrollLeft : 0
-		}, 1000)
-	})
-}
- function detectedScroll(){
-	var scrollVertical = $(window).scrollTop(),
-		 scrollHorizontal = $(window).scrollLeft()
-	//console.log(scrollVertical, scrollHorizontal)	
-	//Si scrollVertical es mayor a 700px al id subir añadele un fadeIn, sino añadele un fadeOut
-	return ( scrollVertical > 700 ) ? $('#subir').fadeIn() : $('#subir').fadeOut()
- }
-
-$(document).ready(efectos)
-$(window).on('scroll', detectedScroll)
-
-//Fin Efectos y animaciones
 
 //Ventana Modal
 
@@ -177,9 +170,9 @@ const createCustomElement = (element, attributes, children) => {
 //Obtenemos cada modal
 
 const modal1 = document.getElementById('modal1'),
-		modal2 = document.getElementById('modal2'),
-		modal3 = document.getElementById('modal3'),
-		modal4 = document.getElementById('modal4')
+	modal2 = document.getElementById('modal2'),
+	modal3 = document.getElementById('modal3'),
+	modal4 = document.getElementById('modal4')
 
 //content es el parametro que recibe la funcion. En el meteremos el contenido del modal en si que va dentro del div modalContentEl
 const printModal = content => {
@@ -192,26 +185,26 @@ const printModal = content => {
 	const modalContainerEl = createCustomElement('div', {
 		id: 'container-modal',
 		class: 'c-modal'
-	}, [modalContentEl] )
+	}, [modalContentEl])
 
-	// Imprimri el modal
+	// Imprimir el modal
 	document.body.appendChild(modalContainerEl)
 
 	//Remover el modal
-	 const removeModal = () => document.body.removeChild(modalContainerEl)
+	const removeModal = () => document.body.removeChild(modalContainerEl)
 
-	 // Evento que ejecuta la funcion que remueve el modal
+	// Evento que ejecuta la funcion que remueve el modal
 
-	 modalContainerEl.addEventListener('click', e => {
-		 if(e.target === modalContainerEl) removeModal()
-	 })
+	modalContainerEl.addEventListener('click', e => {
+		if (e.target === modalContainerEl) removeModal()
+	})
 }
 
 //Contenido de cada modal
-const contModal1 = `<h2>Modal 1 Funciona</h2>`,
-		contModal2 = `<h2>Modal 2 Funciona</h2>`,
-		contModal3 = `<h2>Modal 3 Funciona</h2>`,
-		contModal4 = `<h2>Modal 4 Funciona</h2>`
+const contModal1 = `<h2 class="c-modal-item-title">Modal 1 Funciona</h2>`,
+	contModal2 = `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchS7ijK4Kh_jN3BZliG6wUS39kRFNyqgolHuZPBzVU1f-pJQ/viewform?embedded=true" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>`,
+	contModal3 = `<h2>Modal 3 Funciona</h2>`,
+	contModal4 = `<h2>Modal 4 Funciona</h2>`
 
 //Ejecución de cada modal (esto se puede mejorar con un array de elementos)
 
