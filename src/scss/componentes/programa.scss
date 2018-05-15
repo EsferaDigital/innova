@@ -45,6 +45,8 @@
 		color: color(text-dark);
 		//font-family: $secondary-font;
 		letter-spacing: 2px;
+		// text-indent: 2rem;
+		margin-bottom: $gutter-item;
 	}
 	&-button{
 		margin: $gutter;
