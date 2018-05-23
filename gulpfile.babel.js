@@ -63,10 +63,10 @@ gulp.task('lint', function () {
 // 4° Toma los archivos js activos, los pasa por babel, avisa posibles errores, concatena los archivos, los minifica y los envía a la carpeta public
 
 gulp.task('javascript', ['lint'], function () {
-	return gulp.src('./src/es6/activos/*.js')
+	return gulp.src('./src/es6/activos/**.js')
 		.pipe(babel())
 		.pipe(plumber({ errorHandler: onError }))
-		//.pipe(concat('all.min.js')) para concatenarlos todos
+		.pipe(concat('index.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./public/es5'))
 		.pipe(notify({ message: 'JavaScript task finalizada' }))

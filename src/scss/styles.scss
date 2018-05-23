@@ -1,9 +1,9 @@
 @import "reset/reset.scss";
 
 @import "config/funciones.scss";
-@import "colores/colores.scss";
+@import "config/colores.scss";
 @import "config/fuentes.scss";
-@import "config/botones.scss";
+@import "element/botones.scss";
 @import "config/var_generales.scss";
 @import "config/breakpoints.scss";
 @import "layout/layout.scss";
@@ -18,5 +18,7 @@
 @import "componentes/empresas.scss";
 @import "componentes/patrocinadores.scss";
 @import "componentes/footer.scss";
+@import "element/modal.scss";
+@import "animaciones/animaciones.scss";
 
 
