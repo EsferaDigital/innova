@@ -1,5 +1,7 @@
 //One Page scroll
 
+let alturaHeader = header.offsetHeight;
+
 function onePageScroll(e) {
 	e.preventDefault()
 	var idLink = $(this).attr('href'),
@@ -7,7 +9,7 @@ function onePageScroll(e) {
 
 	$('html, body').animate({
 		//para separarlo un poco del top le puse (coordSection - 60)
-		scrollTop: (coordSection - 60)
+		scrollTop: (coordSection - alturaHeader)
 	}, 1000)
 }
 

@@ -3,34 +3,37 @@
 let mainNav = document.getElementById('main-nav')
 let toggleMenu = document.getElementById('toggle-menu')
 let header = document.getElementById('mainHeader')
-
 let itemLink = document.getElementsByClassName('link')
 
 //Declaramos variables que vamos a usar
 
 let lastScrollTop = 0;
 
-// Programamos las funciones
 
-//Muestra u ocultamos el menu
-function showHideMenu() {
-	mainNav.classList.toggle('show-menu')
-}
+// Programamos las funciones
 
 //Oculta el menu
 function hideMenu() {
 	mainNav.classList.remove('show-menu')
 }
 
+//Muestra u ocultamos el menu
+function showHideMenu() {
+	mainNav.classList.toggle('show-menu')
+}
+
 //Muestra u oculta el header
-function showHideHeader() {
+function headerFixed() {
+	//al hace scroll aumenta el valor de sctop
+	let sctop = document.documentElement.scrollTop;
 	let st = window.pageYOffset || document.documentElement.scrollTop;
+	// console.log(sctop)
 
 	if (st > lastScrollTop) {
-		header.classList.replace('show-header', 'hide-header')
+		header.classList.add('show-header')
 
-	} else {
-		header.classList.replace('hide-header', 'show-header')
+	} else if (sctop === 0) {
+		header.classList.remove('show-header')
 	}
 
 	lastScrollTop = st;
@@ -38,15 +41,17 @@ function showHideHeader() {
 
 //Ejecutamos las funciones
 
-toggleMenu.addEventListener('click', showHideMenu)
+document.addEventListener('click', e => {
+	if (e.target !== mainNav && e.target !== toggleMenu) hideMenu()
+})
 
 mainNav.addEventListener('mouseleave', hideMenu)
+toggleMenu.addEventListener('click', showHideMenu)
+window.addEventListener('scroll', headerFixed, false);
 
-window.addEventListener('scroll', showHideHeader, false);
-
-for (let n = 0; n < itemLink.length; n++) {
-	itemLink[n].addEventListener('click', showHideMenu)
-}
+// for (let n = 0; n < itemLink.length; n++) {
+// 	itemLink[n].addEventListener('click', showHideMenu)
+// }
 
 
 	//para probar, hacer scroll y ver si el console.log() funciona

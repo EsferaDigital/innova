@@ -18,6 +18,12 @@
 		height: 35rem;
 	}
 	@include mq($large){
+		height: 22rem;
+	}
+	@include mq($m-large){
+		height: 21rem;
+	}
+	@include mq($x-large){
 		height: 20rem;
 	}
 	&-banner{
@@ -27,7 +33,8 @@
 		height: 15rem;
 		background-size: cover;
 		background-position: center;
-		background-image: url('../img/banner-desafio.jpg');
+		//background-image: url('../img/banner-desafio.jpg');
+		background-image: img('banner-desafio.jpg');
 		&::before{
 			content: "";
 			position: absolute;
@@ -46,7 +53,11 @@
 			color: color(bg-item);
 			padding: $gutter;
 			font-family: $primary-font;
-			font-size: $big-title;
+			letter-spacing: 2px;
+			font-size: 2rem;
+			@include mq($medium){
+				font-size: 2.2rem;
+			}
 		}
 	}
 }
@@ -54,7 +65,7 @@
 .content-desafio{
 	@include c-wrap;
 	position: absolute;
-   top: 7%;
+   top: 6%;
 	background-color: transparent;
 	justify-content: space-around;
 	padding: $gutter;

@@ -1,15 +1,41 @@
 .c-patrocinadores{
 	@include c-wrap;
+	padding: 0 $gutter-item;
 	width: 100%;
 	background-color: color(cta);
+	@include mq($medium){
+		padding: 0 $gutter;
+	}
 	&-item{
-		@include i-wrap;
-		padding-top: .7rem;
-		width: 25%;
-		text-align: center;
-		font-size: $icon;
-		height: 1.5;
-		line-height: 1.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 33%;
+		height: auto;
 		color: white;
+		padding: 0;
+		// border: 1px solid red;
+		&:first-child{
+			padding: .5rem;
+			@include mq($medium){
+				padding: .5rem 3rem;
+			}
+			@include mq($large){
+				padding: .5rem 8rem;
+			}
+		}
+		@include mq($medium){
+			padding: .5rem;
+		}
+		@include mq($large){
+			padding: .5rem 4rem;
+		}
+	}
+	&-img{
+		display: block;
+		width: 100%;
+		margin: 0;
+		height: auto;
+		// border: 1px solid green;
 	}
 }
