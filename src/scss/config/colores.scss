@@ -1,6 +1,19 @@
 // Paleta de colores
 
+// Naranja: RGB 247-148-30
+// Utilizar este color para destacar elementos principales, como por ejemplo, botones de postulación.
+// Celeste: RGB 0-159-200
+// Utilizar este color para destacar elementos secundarios, como por ejemplo, botones de “saber más”.
+// Gris oscuro: RGB 101 – 118 – 142
+// Utilizar este color para el layout de la página en combinación con gris claro.
+// Gris claro: RGB 182 – 189 – 206
+// Utilizar este color para el layout de la página en combinación con gris oscuro. Recomiendo utilizarlo en opacidad para las fotos del slider. 
+
 $colors:(
+	naranjo: rgb(247, 148, 30),
+	celeste: rgb(0, 159, 200),
+	gris-oscuro: rgb(101, 118, 142),
+	gris-claro: rgb(182, 189, 206),
 	primary: #0075a2,
 	secondary: #60d394,
 	footer: hsla(220, 12%, 10%, 0.9),

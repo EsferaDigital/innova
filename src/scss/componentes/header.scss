@@ -7,8 +7,6 @@
 	z-index: z-index(capa10); 
 	padding: $gutter;
 	transition: all .4s ease;
-	// box-shadow: $shadow-flat;
-	//opacity: .8;
 	&-logo{
 		width: 15%;
 		height: auto;
@@ -34,7 +32,7 @@
 		//top: .5rem;
 		padding: 0 $gutter;
 		z-index: z-index(capa6);
-		color: color(cta);
+		color: color(naranjo);
 		//border: 1px solid red;
 		cursor: pointer;
 		@include mq($medium){
@@ -46,7 +44,7 @@
 .c-nav{
 	position: fixed;
 	display: flex;
-	background-color: color(primary);
+	background-color: color(gris-oscuro);
 	top: 0;
 	right: -$off-canvas;
 	width: $off-canvas;
@@ -59,7 +57,7 @@
 		display: block;
 	}
 	& li{
-		border-bottom: 1px solid color(cta);
+		border-bottom: 1px solid color(naranjo);
 	}
 	& a{
 		display: block;
@@ -70,6 +68,7 @@
 		letter-spacing: 2px;
 		line-height: 3;
 		color: white;
+		cursor: pointer;
 	}
 }
 
@@ -80,9 +79,7 @@
 }
 
 .show-header{
-	// top: 0;
-	// background-color: ligthen(color(primary));
-	background-color: color(primary);
+	background-color: color(gris-oscuro);
 }
 
 .show-menu{

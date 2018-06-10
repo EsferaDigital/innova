@@ -15,13 +15,30 @@
 	}
 	&-text{
 		position: absolute;
+		width: 90%;
+		margin: auto;
 		font-family: $primary-font;
-		font-size: $big-title;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		line-height: 1.5;
 		font-weight: $bold;
 		text-transform: uppercase;
-		transform: translate(0, -100%);
+		transform: translate(0, -70%);
 		z-index: 1;
 		color: white;
+		// border: 2px solid red;
+		@include mq($movil2){
+			line-height: 2;
+		}
+		@include mq($small){
+			width: 80%;
+		}
+		@include mq($medium){
+			font-size: 1.7rem;
+		}
+		@include mq($large){
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -31,8 +48,11 @@
 	position: absolute;
 	justify-content: space-between;
 	z-index: 1;
-	transform: translate(0, 100%);
-	//border: 1px solid red;
+	transform: translate(0, 300%);
+	// border: 1px solid green;
+	@include mq($small){
+		width: 60%;
+	}
 	@include mq($medium){
 		width: 40%;
 	}
@@ -59,7 +79,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: color(primary);
+		background-color: color(gris-oscuro);
 		opacity: .7;
 	}
 }
