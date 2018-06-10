@@ -4,35 +4,42 @@
 	width: 100%;
 	height: auto;
 	justify-content: space-between;
-	z-index: z-index(capa10);
+	z-index: z-index(capa10); 
 	padding: $gutter;
 	transition: all .4s ease;
+	// box-shadow: $shadow-flat;
 	//opacity: .8;
 	&-logo{
-		width: 20vw;
+		width: 15%;
 		height: auto;
-		padding: 0 $gutter;
+		padding: 0;
+		// border: 1px solid red;
 		@include mq($movil1){
-			width: 15vw;
+			width: 13%;
 		}
 		@include mq($medium){
-			width: 10vw;
+			width: 8%;
 		}
 		@include mq($large){
-			width: 7vw;
+			width: 5%;
 		}
-		@include mq($x-large){
-			width: 4vw;
+		& a img{
+			display: block;
+			width: 100%;
 		}
 	}
 	&-menu{
 		position: relative;
 		font-size: 2rem;
-		top: .5rem;
+		//top: .5rem;
 		padding: 0 $gutter;
 		z-index: z-index(capa6);
 		color: color(cta);
+		//border: 1px solid red;
 		cursor: pointer;
+		@include mq($medium){
+			top: .5rem;
+		}
 	}
 }
 
@@ -69,12 +76,13 @@
 //Estilo para eventos
 
 .hide-header{
-	top: -5rem;
+	background-color: transparent;
 }
 
 .show-header{
-	top: 0;
-	background-color: ligthen(color(primary));
+	// top: 0;
+	// background-color: ligthen(color(primary));
+	background-color: color(primary);
 }
 
 .show-menu{

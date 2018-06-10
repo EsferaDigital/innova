@@ -1,31 +1,22 @@
-//Logica de animaciones
+'use strict'
 
-//1° Seleccionar elementos que van a ser animados, para ello agregamos un atributo en html (ej data-anime="left")
-//2° Creamos las animaciones en css. Para seleccionarlos usamos el selector de atributo [data-anime]{opacity: 0; (para que no se vean) transition: .3s;} y luego [data-anime="left"]{(ej)transform: translate3d(-50px, 0, 0)}
-
+//tope de ventana  + ((altura de ventana *3) / 4)
+const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
 const target = document.querySelectorAll('[data-anime]');
-const animationClass = 'animate';
 
-function animeScroll(){
-	//distancia del scroll (element.offsetTop = distancia de cada elemento con el tope de la ventana)
-	const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-	for(let n = 0; n < target.length; n++){
-		if ((windowTop) > target[n].offsetTop) {
-			target[n].classList.add(animationClass)
-			console.log(target[n].offsetTop)
-		}else{
-			target[n].classList.remove(animationClass)
+function animaScroll() {
+	//para capturar cada objeto con el atributo [data-anime]
+	target.forEach(function (e) {
+		// getBoundingClientRect() nos da las coordenadas de los objeto con el atributo [data-anime]
+		let caja = e.getBoundingClientRect()
+		// .top nos da la distancia de esa caja con el tope de la ventana al hacer scroll
+		if (windowTop > caja.top) {
+			e.classList.add('animate')
+		} else {
+			e.classList.remove('animate')
 		}
-	}
+	})
 }
 
-// target.forEach(function (element) {
-// 	if ((windowTop) > element.offsetTop) {
-// 		element.classList.add(animationClass)
-// 		console.log(element.offsetTop)
-// 	}
-// })
-
-window.addEventListener('scroll', function(){
-	animeScroll();
-})
+//capturamos el evento scroll y activamos la funcion
+window.addEventListener('scroll', animaScroll);

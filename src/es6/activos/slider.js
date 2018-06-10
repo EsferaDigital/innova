@@ -43,4 +43,4 @@ function autoplay() {
 
 autoplay()
 
-//Fin Slider
+// Fin Slider
