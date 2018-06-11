@@ -11,7 +11,8 @@
 			width: 33%;
 		}
 		& a{
-			width: 100%;
+			flex: 1 1 30%;
+			padding: 0 $gutter;
 			font-size: 2rem;
 			display: inline-block;
 			text-align: center;
@@ -45,7 +46,11 @@
 	& p{
 		font-size: .9rem;
 		& a{
-			color: white;
+			color: color(celeste);
+			&:hover{
+				transform: scale(1.03);
+				color: darken(color(celeste),5);
+			}
 		}
 	}
 }

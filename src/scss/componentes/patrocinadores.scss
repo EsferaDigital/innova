@@ -4,6 +4,8 @@
 	width: 100%;
 	background-color: color(cta);
 	@include mq($medium){
+		width: 90%;
+		margin: 0 auto;
 		padding: 0 $gutter;
 	}
 	&-item{

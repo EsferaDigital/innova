@@ -4,8 +4,9 @@
 	//desde 320px de vw;
 	height: 89rem;
 	margin: 0 auto;
-	background-color: color(bg);
-	border: 2px solid orange;
+	background-color: color(bg-item);
+	box-shadow: $shadow-flat;
+	// border: 2px solid orange;
 	@include mq($movil1){
 		height: 83rem;
 	}
@@ -22,7 +23,9 @@
 		height: 75rem;
 	}
 	@include mq($medium){
-		height: 43.5rem;
+		width: 90%;
+		margin: 0 auto;
+		height: 46rem;
 	}
 	@include mq($large){
 		height: 39rem;

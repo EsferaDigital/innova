@@ -3,9 +3,9 @@
 	height: auto;
 	//padding: $gutter;
 	margin: .5rem auto .5rem 0;
-	border: 1px solid green;
+	// border: 1px solid green;
 	@include mq($large){
-		padding: $gutter;
+		// padding: $gutter;
 		margin: 0;
 	}
 	&-item{
@@ -16,9 +16,15 @@
 		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
 		// border: 1px solid red;
+		@include mq($medium){
+			flex: 0 0 90%;
+			margin: $gutter auto;
+			padding: 0 3rem;
+		}
 	}
 	&-title{
 		margin: $gutter;
+		color: color(footer);
 		text-align: center;
 		font-family: $primary-font;
 		font-size: $title;
