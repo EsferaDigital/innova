@@ -1,7 +1,7 @@
 .c-empresas{
 	width: 100%;
 	background-color: color(celeste);
-	// border: 2px solid blue;
+	margin-top: $gutter-item;
 	@include mq($medium){
 		width: 90%;
 		margin: 0 auto;

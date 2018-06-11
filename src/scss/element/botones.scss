@@ -4,7 +4,7 @@
 .boton1{
 	display: block;
 	line-height: 3;
-	background-color: color(naranjo);
+	background-color: color(celeste);
 	padding: 0 1.5rem;
 	letter-spacing: 1px;
 	color: white;
@@ -16,7 +16,7 @@
 	font-size: .8rem;
 	cursor: pointer;
 	&:hover{
-		background-color: darken(color(naranjo),5);
+		background-color: darken(color(celeste),5);
 	}
 	&:active{
 		transform: scale(.95);
@@ -26,7 +26,7 @@
 .boton2{
 	display: inline-block;
 	line-height: 3;
-	background-color: color(celeste);
+	background-color: color(naranjo);
 	padding: 0 1.5rem;
 	color: white;
 	text-transform: uppercase;
@@ -37,7 +37,7 @@
 	font-family: $secondary-font;
 	cursor: pointer;
 	&:hover{
-		background-color: darken(color(celeste),5);
+		background-color: darken(color(naranjo),5);
 	}
 	&:active{
 		transform: scale(.95);
