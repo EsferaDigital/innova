@@ -32,7 +32,7 @@ gulp.task('pug2html', function buildHTML() {
 			pretty: true
 		}))
 		.pipe(gulpPugBeautify({ omit_empty: true }))
-		//.pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
+		.pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
 		.pipe(gulp.dest('./public/'))
 })
 

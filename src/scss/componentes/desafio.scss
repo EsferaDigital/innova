@@ -2,29 +2,33 @@
 	position: relative;
 	width: 100%;
 	//desde 320px de vw;
-	height: 67.5rem;
-	margin: $gutter-item auto $gutter 0;
+	height: 90rem;
+	margin: 0 auto;
 	background-color: color(bg);
+	// border: 2px solid orange;
 	@include mq($movil1){
-		height: 64.5rem;
+		height: 85rem;
 	}
 	@include mq($movil2){
-		height: 64rem;
+		height: 83rem;
+	}
+	@include mq($movil3){
+		height: 80rem;
+	}
+	@include mq($movil4){
+		height: 79rem;
 	}
 	@include mq($small){
-		height: 62.5rem;
+		height: 75rem;
 	}
 	@include mq($medium){
-		height: 35rem;
+		height: 43.5rem;
 	}
 	@include mq($large){
-		height: 22rem;
+		height: 39rem;
 	}
 	@include mq($m-large){
-		height: 21rem;
-	}
-	@include mq($x-large){
-		height: 20rem;
+		height: 29rem;
 	}
 	&-banner{
 		width: 100%;
@@ -42,7 +46,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: color(primary);
+			background-color: color(gris-oscuro);
 			opacity: .8;
 		}
 		&-title{
@@ -65,65 +69,66 @@
 .content-desafio{
 	@include c-wrap;
 	position: absolute;
-   top: 6%;
+	//tambien es necesario modificarlo si cambiamos la altura del c-desafio
+   top: 4%;
 	background-color: transparent;
 	justify-content: space-around;
-	padding: $gutter;
-	//border: 1px solid red;
+	padding: 0 $gutter;
+	// border: 1px solid red;
+	@include mq($movil1){
+		top: 4.5%;
+	}
+	@include mq($movil2){
+		top: 5%;
+	}
 	@include mq($medium){
-		top: 13%;
+		top: 10%;
 	}
 	@include mq($large){
-		top: 20%;
+		top: 11%;
+	}
+	@include mq($m-large){
+		top: 14%;
 	}
 	&-item{
 		@include i-wrap;
-		width: 97%;
+		position: relative;
+		flex: 1 1 97%;
 		padding: $gutter;
 		margin-bottom: $gutter-item;
 		font-family: $secondary-font;
 		box-shadow: $shadow-flat;
-		background-color: color(bg-item);
+		color: white;
+		background-color: color(celeste);
+		// border: 2px solid green;
 		@include mq($medium){
-			width: 42%;
+			flex: 1 1 48%;
 			margin-right: $gutter-item;
 		}
-		@include mq($large){
-			width: 22%;
+		@include mq($m-large){
+			flex: 1 1 30%;
+		}
+		&:hover{
+			cursor: pointer;
+			transform: scale(1.03);
+		}
+		& h2{
+			color: color(footer);
+			text-align: center;
+			font-family: $primary-font;
+			font-size: $sub-title;
+			font-weight: $bold;
+		}
+		& h4{
+			margin-top: .5rem;
+			text-align: center;
+			font-weight: bold;
+			font-family: $secondary-font;
+			font-size: 1.2rem;
 		}
 		& p{
 			text-align: center;
 			padding: $gutter;
 		}
-	}
-	&-item:nth-child(even){
-		margin-right: 0;
-		@include mq($large){
-			margin-right: $gutter-item;
-		}
-	}
-	&-item:last-child{
-		margin-right: 0;
-		@include mq($large){
-			margin-right: 0;
-		}
-	}
-	&-item:hover{
-		background-color: color(secondary);
-		color: white;
-		cursor: pointer;
-	}
-	&-icon{
-		margin: auto;
-		text-align: center;
-		font-size: $icon;
-		color: color(cta);
-		padding: $gutter;
-	}
-	&-title{
-		text-align: center;
-		font-family: $primary-font;
-		font-size: $sub-title;
-		font-weight: $bold;
 	}
 }

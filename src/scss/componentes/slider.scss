@@ -16,14 +16,13 @@
 	&-text{
 		position: absolute;
 		width: 90%;
-		margin: auto;
 		font-family: $primary-font;
 		font-size: 1.2rem;
 		letter-spacing: 1px;
 		line-height: 1.5;
 		font-weight: $bold;
 		text-transform: uppercase;
-		transform: translate(0, -70%);
+		transform: translate(0, -50%);
 		z-index: 1;
 		color: white;
 		// border: 2px solid red;
@@ -44,7 +43,7 @@
 
 .botones{
 	display: flex;
-	width: 80%;
+	width: 90%;
 	position: absolute;
 	justify-content: space-between;
 	z-index: 1;
@@ -72,6 +71,7 @@
 	text-align: center;
 	background-size: cover;
 	background-position: center;
+	// border: 2px solid red;
 	&::before{
 		content: "";
 		position: absolute;
@@ -84,30 +84,35 @@
 	}
 }
 
-.slider-img-1{	background-image: url('../img/1.jpg');}
-.slider-img-2{background-image: url('../img/2.jpg');}
-.slider-img-3{	background-image: url('../img/3.jpg');}
+.slider-img-1{	background-image: img('1.jpg');}
+.slider-img-2{background-image: img('2.jpg');}
+.slider-img-3{	background-image: img('3.jpg');}
 
 .btn-prev, .btn-next{
 	display: none;
-	//width: rem(40px);
-	//height: rem(40px);
+	width: rem(40px);
+	height: rem(40px);
 	padding: $gutter-item;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: color(gris-claro);
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	//line-height: rem(40px);
-	font-size: 22px;
 	color: white;
 	font-weight: bold;
 	text-align: center;
 	font-family: monospace;
 	border-radius: 50%;
 	cursor: pointer;
+	&:before{
+		position: relative;
+		font-size: 2rem;
+		bottom: .25rem;
+		right: .23rem;
+	}
 	&:hover{
-		background-color: rgba(255, 255, 255, 1);
-		color: color(cta);
+		background-color: darken(color(gris-oscuro),7);
+		color: color(naranjo);
 	}
 	@include mq($medium){
 		display: block;

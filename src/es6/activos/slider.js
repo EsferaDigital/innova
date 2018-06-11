@@ -38,7 +38,7 @@ prev.on('click', function () {
 function autoplay() {
 	setInterval(function () {
 		moverD()
-	}, 5000)
+	}, 6000)
 }
 
 autoplay()

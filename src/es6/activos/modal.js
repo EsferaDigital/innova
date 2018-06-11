@@ -63,12 +63,12 @@ const printModal = content => {
 }
 
 //Contenido de cada modal
-const contModal1 = `<h2 class="c-modal-item-title">Modal 1 Funciona</h2>`,
-		contModal2 = `<h2 class="c-modal-item-title">Modal 2 Funciona</h2>`,
-		contModal3 = `<h2>Modal 3 Funciona</h2>`,
-		contModal4 = `<h2>Modal 4 Funciona</h2>`,
-		contModal5 = `<h2>Modal 5 Funciona</h2>`,
-		contModal6 = `<h2>Modal 6 Funciona</h2>`,
+const contDesafio1 = `<embed src="/files/bejos.pdf" type="application/pdf" width="100%" height="100%" />`,
+		contDesafio2 = `<embed src="/files/mercurio.pdf" type="application/pdf" width="100%" height="100%" />`,
+		contDesafio3 = `<embed src="/files/build.pdf" type="application/pdf" width="100%" height="100%" />`,
+		contDesafio4 = `<embed src="/files/ferrocarriles.pdf" type="application/pdf" width="100%" height="100%" />`,
+		contDesafio5 = `<embed src="/files/novamine.pdf" type="application/pdf" width="100%" height="100%" />`,
+		contDesafio6 = `<embed src="/files/aguas.pdf" type="application/pdf" width="100%" height="100%" />`,
 
 	contPostula = `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflJ4hlP3x_0OANM2W2ZywnFvm6PyHrovoDsjxoBSQJw0S5PQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>`,
 
@@ -82,26 +82,26 @@ const contModal1 = `<h2 class="c-modal-item-title">Modal 1 Funciona</h2>`,
 // }
 
 modal1.addEventListener('click', () => {
-	printModal(`${contModal1}`)
+	printModal(`${contDesafio1}`)
 })
 
 modal2.addEventListener('click', () => {
-	printModal(`${contModal2}`)
+	printModal(`${contDesafio2}`)
 })
 
 modal3.addEventListener('click', () => {
-	printModal(`${contModal3}`)
+	printModal(`${contDesafio3}`)
 })
 modal4.addEventListener('click', () => {
-	printModal(`${contModal4}`)
+	printModal(`${contDesafio4}`)
 })
 
 modal5.addEventListener('click', () => {
-	printModal(`${contModal4}`)
+	printModal(`${contDesafio5}`)
 })
 
 modal6.addEventListener('click', () => {
-	printModal(`${contModal4}`)
+	printModal(`${contDesafio6}`)
 })
 
 modalPrograma.addEventListener('click', () => {

@@ -6,7 +6,10 @@
 	line-height: 3;
 	background-color: color(naranjo);
 	padding: 0 1.5rem;
+	letter-spacing: 1px;
 	color: white;
+	font-family: $secondary-font;
+	font-weight: bold;
 	text-transform: uppercase;
 	//para redondeado perfecto darle la mitad de la altura
 	border-radius: 1.5rem;
@@ -28,7 +31,10 @@
 	color: white;
 	text-transform: uppercase;
 	border-radius: 1.5rem;
+	letter-spacing: 1px;
+	font-weight: bold;
 	font-size: .8rem;
+	font-family: $secondary-font;
 	cursor: pointer;
 	&:hover{
 		background-color: darken(color(celeste),5);

@@ -2,7 +2,8 @@
 	@include c-wrap;
 	height: auto;
 	//padding: $gutter;
-	margin: .5rem auto 0 0;
+	margin: .5rem auto .5rem 0;
+	border: 1px solid green;
 	@include mq($large){
 		padding: $gutter;
 		margin: 0;
@@ -14,56 +15,45 @@
 		margin: 0;
 		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
-		//border: 1px solid red;
-		@include mq($medium){
-			width: 45%;
-		}
-	}
-	&-item:first-child{
-		margin-right: 0;
-		@include mq($medium){
-			margin-right: $gutter-item;
-		}
-	}
-	&-item:last-child{
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		// border: 1px solid red;
 	}
 	&-title{
 		margin: $gutter;
-		margin-left: 0;
 		text-align: center;
 		font-family: $primary-font;
 		font-size: $title;
 		letter-spacing: 2px;
-		@include mq($medium){
-			text-align: left;
-		}
 	}
 	&-text{
 		color: color(text-dark);
-		//font-family: $secondary-font;
+		font-family: $secondary-font;
 		letter-spacing: 2px;
 		// text-indent: 2rem;
 		margin-bottom: $gutter-item;
+		&:nth-last-child(-n+3){
+			// border: 2px solid red;
+			font-weight: bold;
+			& span{
+				font-weight: normal;
+				margin-left: .5rem;
+			}
+		}
+		&-ul{
+			margin-bottom: .5rem;
+			// border: 2px solid green;
+			& li{
+				font-family: $secondary-font;
+				letter-spacing: 2px;
+				list-style: disc;
+				margin-left: 1.2rem;
+				margin-bottom: .5rem;
+			}
+		}
 	}
 	&-button{
 		margin: $gutter;
 		margin-right: 0;
 		float: right;
 		cursor: pointer;
-	}
-	&-img{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: auto;
-		padding: $gutter;
-		& img{
-			display: block;
-			height: auto;
-		}	
 	}
 }
