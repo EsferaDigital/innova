@@ -72,7 +72,7 @@ const contDesafio1 = `<embed src="/files/bejos.pdf" type="application/pdf" width
 
 	contPostula = `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflJ4hlP3x_0OANM2W2ZywnFvm6PyHrovoDsjxoBSQJw0S5PQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>`,
 
-		contPrograma = `<h2>Modal Programa Funciona</h2>`
+	contPrograma = `<embed src="/files/infografia.pdf" type="application/pdf" width="100%" height="100%" />`
 
 //Ejecución de cada modal (esto se puede mejorar con un array de elementos)
 

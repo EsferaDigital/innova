@@ -1,9 +1,7 @@
 .c-empresas{
-	@include c-wrap;
 	width: 100%;
-	padding: $gutter;
-	margin: $gutter-item auto 0 0;
 	background-color: color(secondary);
+	border: 2px solid blue;
 	&-title{
 		text-align: center;
 		width: 100%;
@@ -12,16 +10,22 @@
 		font-family: $primary-font;
 		font-size: $title;
 	}
+}
+
+.contain-empresas{
+	@include c-wrap;
+	width: 100%;
+	padding: $gutter;
+	// margin: $gutter-item auto 0 0;
+	border: 3px solid rgb(236, 10, 86);
 	&-item{
 		@include i-wrap;
-		max-width: 97%;
-		margin: auto;
-		padding: $gutter;
-		margin-bottom: $gutter-item;
+		flex: 1 1 100%;
+		padding: 0 $gutter;
 		font-family: $secondary-font;
 		box-shadow: $shadow-flat;
 		background-color: color(bg-item);
-		//border: 1px solid green;
+		border: 2px solid green;
 		@include mq($medium){
 			width: 48%;
 			margin-right: $gutter-item;
@@ -29,23 +33,17 @@
 		@include mq($large){
 			width: 22%;
 		}
-	}
-	&-icon{
-		margin: auto;
-		text-align: center;
-		font-size: $icon;
-		color: color(cta);
-		padding: 0 $gutter-item;
-	}
-	&-subtitle{
-		text-align: center;
-		width: 100%;
-		color: black;
-		padding: $gutter-item;
-		font-family: $primary-font;
-		font-size: $sub-title;
-	}
-	& p{
-		text-align: center;
+		&-subtitle{
+			text-align: center;
+			width: 100%;
+			color: black;
+			padding: $gutter-item;
+			font-family: $primary-font;
+			font-size: $sub-title;
+
+		}
+		&-img{
+			border: 2px solid red;
+		}
 	}
 }

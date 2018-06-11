@@ -2,21 +2,21 @@
 	position: relative;
 	width: 100%;
 	//desde 320px de vw;
-	height: 90rem;
+	height: 89rem;
 	margin: 0 auto;
 	background-color: color(bg);
-	// border: 2px solid orange;
+	border: 2px solid orange;
 	@include mq($movil1){
-		height: 85rem;
-	}
-	@include mq($movil2){
 		height: 83rem;
 	}
-	@include mq($movil3){
+	@include mq($movil2){
 		height: 80rem;
 	}
-	@include mq($movil4){
+	@include mq($movil3){
 		height: 79rem;
+	}
+	@include mq($movil4){
+		height: 77rem;
 	}
 	@include mq($small){
 		height: 75rem;
