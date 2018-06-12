@@ -1,8 +1,8 @@
 'use strict'
 
-//tope de ventana  + ((altura de ventana *3) / 4)
-const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-const target = document.querySelectorAll('.animado');
+//tope de ventana  + ((altura de ventana *3) / 5)
+const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 5);
+const target = document.querySelectorAll('[data-anime]');
 
 function animaScroll() {
 	//para capturar cada objeto con el atributo [data-anime]
@@ -11,9 +11,9 @@ function animaScroll() {
 		let caja = e.getBoundingClientRect()
 		// .top nos da la distancia de esa caja con el tope de la ventana al hacer scroll
 		if (windowTop > caja.top) {
-			e.classList.add('slidetop')
+			e.classList.add('animate')
 		} else {
-			e.classList.remove('slidetop')
+			e.classList.remove('animate')
 		}
 	})
 }

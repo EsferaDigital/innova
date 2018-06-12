@@ -3,6 +3,7 @@
 	padding: 0 $gutter-item;
 	width: 100%;
 	background-color: color(cta);
+	overflow: hidden;
 	@include mq($medium){
 		width: 90%;
 		margin: 0 auto;

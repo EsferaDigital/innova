@@ -15,6 +15,7 @@
 		margin: 0;
 		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
+		overflow: hidden;
 		// border: 1px solid red;
 		@include mq($medium){
 			flex: 0 0 90%;
