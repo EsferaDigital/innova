@@ -63,19 +63,34 @@ const printModal = content => {
 }
 
 //Contenido de cada modal
-const contDesafio1 = `<embed src="/files/bejos.pdf" type="application/pdf" width="100%" height="100%" />`,
-		contDesafio2 = `<embed src="/files/mercurio.pdf" type="application/pdf" width="100%" height="100%" />`,
-		contDesafio3 = `<embed src="/files/build.pdf" type="application/pdf" width="100%" height="100%" />`,
-		contDesafio4 = `<embed src="/files/ferrocarriles.pdf" type="application/pdf" width="100%" height="100%" />`,
-		contDesafio5 = `<embed src="/files/novamine.pdf" type="application/pdf" width="100%" height="100%" />`,
-		contDesafio6 = `<embed src="/files/aguas.pdf" type="application/pdf" width="100%" height="100%" />`,
+// Si quisiera embeber un pdf: contDesafio6 = `<embed src="/files/aguas.pdf" type="application/pdf" width="100%" height="100%" />`
+const contDesafio1 = `<div class="scroll-desafio">
+									<img src="/img/bejos.png" alt="Desafio Bejos" />
+							</div>`,
+		contDesafio2 = `<div class="scroll-desafio">
+									<img src="/img/d-mercurio.png" alt="Desafio Mercurio" />
+							</div>`,
+		contDesafio3 = `<div class="scroll-desafio">
+									<img src="/img/buildtek.png" alt="Desafio Buildtek" />
+							</div>`,
+		contDesafio4 = `<div class="scroll-desafio">
+									<img src="/img/ferrocarril.png" alt="Desafio Ferrocarril" />
+							</div>`,
+		contDesafio5 = `<div class="scroll-desafio">
+									<img src="/img/d-novamine.png" alt="Desafio Novamine" />
+							</div>`,
+		contDesafio6 = `<div class="scroll-desafio">
+									<img src="/img/aguas.png" alt="Desafio Aguas" />
+							</div>`,
 
 	contPostula = `
 		<div class="scroll-iframe">
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflJ4hlP3x_0OANM2W2ZywnFvm6PyHrovoDsjxoBSQJw0S5PQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
 		</div>`,
 
-	contPrograma = `<embed src="/files/infografia2.pdf" type="application/pdf" width="100%" height="100%" />`
+	contPrograma = `<div class="scroll-desafio">
+									<img src="/img/infografia.png" alt="Infografia" />
+							</div>`
 
 //Ejecución de cada modal (esto se puede mejorar con un array de elementos)
 
